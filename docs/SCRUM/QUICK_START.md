@@ -1,121 +1,89 @@
-# Quick Start Guide: Scrum Documentation System
+# Quick Start Guide: Keek AI Studio & Scrum Process
 
-**Last Updated**: January 2, 2026  
-**For**: Game Master Assistant Project
+**Last Updated**: February 4, 2026  
+**For**: Keek AI Project
 
 ---
 
 ## 🚀 Get Started in 5 Minutes
 
-### Step 1: Understand the Project (2 minutes)
+### Step 1: Understand the Studio (2 minutes)
 
-**Current Goal**: Transform GMA from a generic world-building tool into a creative story-generation platform with sophisticated AI management.
+**What is Keek AI?** A single-machine, multi-role AI development studio that orchestrates logical personas to build web applications collaboratively.
 
-**Key Changes**:
-1. **World → StoryPitch** - Better represents creative narrative focus
-2. **Remove Regions** - Simplify hierarchy to Genre → StoryPitch → Entity
-3. **Prompt Management** - Move all hard-coded AI prompts to database with admin UI
-4. **AI Configuration** - Select provider and model per function with cost tracking
+**Core Principles**:
+1. **Files as Truth** - Persistent state lives in files, not chat
+2. **Discord as Floor** - Status updates, approvals, error surfacing only
+3. **Roles Over Humans** - Producer, PM, Dev, QA, Ops as logical personas
+4. **Turn-Based Work** - Simulated parallelism through sequential task handoffs
+5. **Clear Boundaries** - Dedicated filesystem, single user account, revocable access
 
 ---
 
 ### Step 2: Read the Core Docs (2 minutes)
 
 #### Must Read (in order):
-1. **[README.md](./README.md)** - Project overview and structure
-2. **[SCRUM_PROCESS.md](./SCRUM_PROCESS.md)** - How we work
-3. **[PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md)** - Current project details
+1. **AI Studio Initial Setup** - Foundation principles and architecture
+2. **[README.md](./README.md)** - Project overview and structure
+3. **[SCRUM_PROCESS.md](./SCRUM_PROCESS.md)** - How we work with tasks
+4. **[PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md)** - Current project details
 
 #### Reference When Needed:
-- Sprint READMEs - Sprint-specific plans
-- Story folders - Detailed implementation specs
-- [DOCUMENTATION_GUIDE.md](../docs/DOCUMENTATION_GUIDE.md) - How to update docs
+- Task definitions in `tasks/` directory
+- Role prompts in `prompts/` directory
+- Build artifacts in `artifacts/` directory
 
 ---
 
-### Step 3: Pick Your Starting Point (1 minute)
+### Step 3: Pick Your First Task (1 minute)
 
-#### Option A: Start Sprint 1 Now
-**If you're ready to code immediately:**
+**Task Workflow**:
+1. Review `tasks/` for available tasks
+2. Find one marked "status: planned"
+3. Update task status to "in-progress"
+4. Read task definition (acceptance criteria, details)
+5. Execute the task in your assigned role
+6. Update task status to "done" when complete
 
-1. Go to [SPRINT_1_COMPLETE_STORYPITCH/](./SPRINT_1_COMPLETE_STORYPITCH/)
-2. Read sprint [README.md](./SPRINT_1_COMPLETE_STORYPITCH/README.md)
-3. Start with [STORY_01](./SPRINT_1_COMPLETE_STORYPITCH/STORY_01_COMPLETE_COMPONENTS/)
-4. Read STORY_01 [README.md](./SPRINT_1_COMPLETE_STORYPITCH/STORY_01_COMPLETE_COMPONENTS/README.md)
-5. Begin implementation
-
-#### Option B: Plan First
-**If you want to review the full plan:**
-
-1. Review all Sprint READMEs to understand the big picture
-2. Estimate your available time
-3. Adjust story points if needed
-4. Then proceed with Option A
+**By Role**:
+- **Producer**: Pick "orchestrate task assignment" tasks
+- **PM**: Pick "define specs" or "create acceptance criteria" tasks
+- **Dev**: Pick "implement feature" or "build component" tasks
+- **QA**: Pick "test feature" or "validate criteria" tasks
+- **Ops**: Pick "build" or "deploy" tasks
 
 ---
 
-## 📊 Project Overview
+## 📊 Project Status
 
-### Timeline (Estimated)
+### Current Sprint: Studio Foundation Complete
 
-```
-Sprint 1: Complete StoryPitch Migration        (2 weeks, 19 points)
-Sprint 2: Admin Prompt Management System       (2-3 weeks, 39 points)
-Sprint 3: AI Configuration System              (2 weeks, 29 points)
-Sprint 4: Integration Testing & Deployment     (1-2 weeks, 23 points)
-────────────────────────────────────────────────────────────────────
-Total:                                         (7-9 weeks, 110 points)
-```
+✅ **Completed**:
+- Git repository connected (github.com/esiege/Keek-AI)
+- Filesystem structure established
+- Directory READMEs implemented
+- VS Code shell integration enabled
+- PowerShell profile configured with Git alias
 
-### What Gets Built
-
-```
-Before:
-Genre → World → Region → Entity
-        ↑ confusing    ↑ unnecessary
-        ↑ hard-coded prompts everywhere
-        ↑ no config control
-
-After:
-Genre → StoryPitch → Entity
-        ↑ clear narrative focus
-        ↑ database-driven prompts with admin UI
-        ↑ per-function provider/model configuration
-        ↑ cost tracking and optimization
-```
+🔄 **Next Phase**:
+- Start first web application project
+- Use studio workflow to design, build, test, deploy
+- Document lessons learned
 
 ---
 
-## 🎯 Current Status
+## 📁 Key Directories
 
-### Completed Work
-- ✅ StoryPitchContext and services
-- ✅ StoryPitch routing
-- ✅ Basic component structure
-- ✅ Backend API endpoints for story pitches
-
-### In Progress
-- 🔄 Component migration (Sprint 1, Story 1)
-- 🔄 Region removal planning
-
-### Not Started
-- ⏳ Prompt management system (Sprint 2)
-- ⏳ AI configuration system (Sprint 3)
-- ⏳ Integration testing (Sprint 4)
-
----
-
-## 📁 Folder Navigation
-
-### Find What You Need
-
-**Sprint Information**:
+**Studio Directories**:
 ```
-scrum/
-├── SPRINT_1_COMPLETE_STORYPITCH/
-│   └── README.md                    ← Sprint 1 overview
-├── SPRINT_2_ADMIN_PROMPT_SYSTEM/
-│   └── README.md                    ← Sprint 2 overview
+c:\Users\Keek_AI\Documents\Keek AI\
+├── docs/          ← Project specs and plans
+├── prompts/       ← Role definitions and agent prompts
+├── tasks/         ← Task definitions and state
+├── repos/         ← Future: additional repos
+├── artifacts/     ← Build outputs and test reports
+├── logs/          ← Runtime and orchestration logs
+└── secrets/       ← Credentials (never commit)
 ├── SPRINT_3_AI_CONFIG_SYSTEM/
 │   └── README.md                    ← Sprint 3 overview
 └── SPRINT_4_INTEGRATION_TESTING/

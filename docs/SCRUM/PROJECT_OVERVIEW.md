@@ -1,36 +1,38 @@
-# Project Overview: AI-Driven Prompt Management & StoryPitch Architecture
+# Project Overview: Keek AI - Multi-Role AI Development Studio
 
-**Last Updated**: January 2, 2026  
-**Version**: 2.0  
-**Status**: Active Development
+**Last Updated**: February 4, 2026  
+**Version**: 1.0  
+**Status**: Foundation Setup & Initial Development
 
 ---
 
 ## 🎯 Project Vision
 
-Transform the Game Master Assistant from a world-building tool into a creative story-generation platform with sophisticated AI prompt management and configuration capabilities.
+Build a single-machine, multi-role AI development studio that orchestrates logical personas (Producer, PM, Dev, QA, Ops) to collaboratively design, build, and deploy web applications. Prioritize clarity, state management, and extensibility while keeping the foundation simple and file-based.
 
 ---
 
 ## 📖 Current State Analysis
 
-### Existing Architecture
+### Established Principles
 
-**Entity Hierarchy** (Current):
+**Core Design Constraints**:
 ```
-Genre
-  └── World (being migrated → StoryPitch)
-      └── Region (to be removed)
-          └── Entity (Character, Place, Item, Event)
+✅ Single physical machine with multiple logical roles
+✅ Files as the source of truth (persistent state)
+✅ Discord as collaboration surface (signal and decisions)
+✅ Turn-based orchestration (simulated parallelism)
+✅ Dedicated Windows user account
+✅ Clear filesystem boundaries and encapsulation
 ```
 
-**Problems with Current Design**:
-
-1. **"World" is too generic** - Doesn't capture the creative storytelling focus
-2. **Region adds unnecessary complexity** - Extra layer without clear purpose
-3. **Hard-coded AI prompts scattered everywhere** - No central management
-4. **AI configuration mixed with code** - Provider/model selection is inflexible
-5. **No fine-tuning preparation** - Architecture doesn't support future ML workflows
+**Non-Goals**:
+```
+❌ Unlimited autonomous loops
+❌ Network-exposed services
+❌ Emotion simulation
+❌ Replacing human judgment
+```
 
 ### Migration Status (World → StoryPitch)
 

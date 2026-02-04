@@ -1,13 +1,16 @@
 # Scrum Process Guide
 
-**Last Updated**: January 2, 2026  
+**Last Updated**: February 4, 2026  
 **Version**: 1.0
+**For**: Keek AI Multi-Role Development Studio
 
 ---
 
 ## 📋 Overview
 
-This document explains how we use Scrum for the Game Master Assistant project. It's tailored for solo developers, small teams, and AI-assisted development workflows.
+This document explains how to use Scrum for the Keek AI project. Keek AI is a single-machine studio with multiple logical roles (Producer, PM, Dev, QA, Ops) that coordinate through task-based handoffs and file-based state management.
+
+**Core Principle**: Tasks are the primary coordination mechanism. Each task moves through states (planned → in-progress → done) with a single owner at a time.
 
 ---
 
@@ -15,55 +18,96 @@ This document explains how we use Scrum for the Game Master Assistant project. I
 
 ### Core Principles
 
-1. **Iterative Development** - Build incrementally in sprints
-2. **Clear Goals** - Each sprint has defined objectives
-3. **Continuous Improvement** - Learn and adapt from each sprint
-4. **Transparent Progress** - All work is visible and tracked
-5. **Documentation First** - Plan before coding, document as you go
+1. **Task-Based Coordination** - Work moves through explicit task objects with clear ownership
+2. **File-Based State** - All state lives in files (`tasks/`), not chat  
+3. **Role Clarity** - Each person adopts a logical role with defined responsibilities
+4. **Explicit Handoffs** - One task owner at a time; handoff documented when role changes
+5. **Transparent Progress** - Discord updates on blockers and completions
+6. **Documentation First** - Write acceptance criteria before implementing
 
 ---
 
-## 🏃 Sprint Cycle
+## 🏃 Task Management Cycle
 
-### Sprint Duration
-- **Standard**: 1-2 weeks
-- **Flexible**: Adjust based on story complexity
-- **Recommendation**: Start with 2-week sprints
+### Task Structure
 
-### Sprint Phases
+Each task in `tasks/` contains:
+- **ID**: Unique identifier (TASK-001, TASK-002, etc.)
+- **Title**: Clear description of work
+- **Owner**: Current role responsible for execution
+- **Status**: planned | in-progress | done
+- **Acceptance Criteria**: Definition of done
+- **Role**: Which persona should own this (Producer, PM, Dev, QA, Ops)
 
-#### 1. Sprint Planning (1-2 hours)
-**Goal**: Select and plan stories for the sprint
+### Task Workflow
+
+```
+1. PLANNED
+   ↓
+2. Pick task by priority
+   ↓
+3. Change status to IN-PROGRESS
+   ↓
+4. Read acceptance criteria
+   ↓
+5. Execute in your assigned role
+   ↓
+6. Update logs/ with progress
+   ↓
+7. Change status to DONE
+   ↓
+8. Post update to Discord
+```
+
+### Daily Cycle
+
+**Morning (Planning)**:
+- Review `tasks/` for high-priority planned work
+- Assign task to yourself by updating status
+- Read specification and acceptance criteria
+- Update `logs/` with start time and target completion
+
+**Throughout Day (Execution)**:
+- Execute work per task specification
+- Commit code with task ID reference (e.g., "TASK-042: implement user auth")
+- Update `logs/` with progress milestones
+- Document blockers in task file
+
+**End of Day (Handoff)**:
+- If continuing tomorrow, update task with "in-progress" status
+- If complete, change status to "done"
+- Post summary to Discord with timestamp
+- Move to next task
+
+### Blockers & Escalation
+
+If task is blocked:
+1. Document blocker in task file with timestamp
+2. Post to Discord #control channel with @producer mention
+3. Producer routes blocker request to appropriate role
+4. Continue with unblocked tasks while waiting
+
+---
+
+## 🔄 Sprint Planning (Weekly)
+
+### Weekly Planning Session (1 hour)
+
+**Goal**: Review progress, plan next week, identify blockers
 
 **Activities**:
-- Review project backlog
-- Assess team velocity from previous sprint
-- Select stories that fit capacity
-- Break down large stories (13+ points)
-- Assign story points
-- Create/update sprint folder
-- Set sprint goal
+- Review completed tasks from past week
+- Review in-progress tasks
+- Calculate velocity (tasks completed / week)
+- Review backlog for next week's priorities
+- Create new task definitions if needed
+- Set priority order
+- Update sprint folder with status
 
 **Output**:
-- Sprint README with selected stories
-- Story folders created
-- Acceptance criteria defined
-
----
-
-#### 2. Sprint Execution (1-2 weeks)
-**Goal**: Complete story implementations
-
-**Daily Activities**:
-- Pick highest priority incomplete story
-- Read story README and acceptance criteria
-- Implement changes following implementation notes
-- Update IMPLEMENTATION_NOTES.md with decisions
-- Test against TESTING_CHECKLIST.md
-- Update documentation per DOCUMENTATION_GUIDE.md
-- Commit changes with story reference
-
-**Story Workflow**:
+- Updated task list with clear priorities
+- Any new tasks defined with acceptance criteria
+- Blockers identified and escalated
 ```
 1. Story TODO → IN PROGRESS
 2. Implement features

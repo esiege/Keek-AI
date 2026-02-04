@@ -1,38 +1,44 @@
 # Scrum Documentation Master Guide
 
-**Last Updated**: January 2, 2026  
-**Project**: Game Master Assistant - AI-Driven Prompt Management System
+**Last Updated**: February 4, 2026  
+**Project**: Keek AI - Multi-Role AI Development Studio
 
 ---
 
 ## 📋 Overview
 
-This folder contains all Scrum project management documentation for the Game Master Assistant (GMA) platform. Each sprint is organized as a subfolder containing individual story subfolders with detailed specifications, acceptance criteria, and implementation notes.
+This folder contains all Scrum project management documentation for the Keek AI project. Keek AI is a single-machine, multi-role AI development studio with logical personas (Producer, PM, Developer, QA, Ops) coordinating work through turn-based orchestration.
+
+Each sprint is organized as a subfolder containing individual story subfolders with detailed specifications, acceptance criteria, and implementation notes.
 
 ---
 
-## 🎯 Current Project: World → StoryPitch + AI Prompt Management System
+## 🎯 Current Project: AI Studio Core Setup & Web Application Development
 
 ### Project Goals
 
-1. **Terminology Migration**: Complete the migration from "Worlds" to "Story Pitches" to better represent the creative narrative focus
-2. **AI Prompt Management**: Create an admin interface to manage all hard-coded AI prompts throughout the application
-3. **AI Configuration**: Build a centralized configuration system for AI provider (OpenAI/Anthropic) and model selection per function
-4. **Extensibility**: Design the system to support future fine-tuning workflows and additional AI providers
+1. **Studio Foundation**: Establish the core infrastructure for the multi-role AI development studio
+2. **Filesystem Organization**: Implement the baseline directory structure (docs, prompts, tasks, repos, artifacts, logs, secrets)
+3. **Collaboration Surface**: Set up Discord integration for status updates, approvals, and error surfacing
+4. **Initial Web Application**: Build the first web application to validate the studio workflow
+5. **Scalability**: Design systems that support growth (bot accounts, containerization, task DB) without changing the foundation
 
-### High-Level Architecture Changes
+### High-Level Architecture
 
 ```
-Current State:
-Genre → World → Region → Entity (Character/Place/Item/Event)
-        ↑ (needs completion)
+Studio Architecture:
+Single Machine
+  ├── Producer/Orchestrator (routes tasks, tracks state)
+  ├── Product Manager (specs, plans)
+  ├── Developer (code, features)
+  ├── QA Engineer (tests, validation)
+  └── Operations (build, deploy)
 
-Target State:
-Genre → Story Pitch → Entity (Character/Place/Item/Event)
-                     ↓
-              Admin Prompt Management System
-              ↓
-              AI Config Management (Provider + Model per Function)
+Communication:
+  └── Discord (studio floor - status, approvals, errors)
+
+Persistence:
+  └── Filesystem (source of truth - files, not chat)
 ```
 
 ---
