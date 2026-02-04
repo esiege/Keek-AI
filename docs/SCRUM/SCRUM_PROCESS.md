@@ -27,87 +27,90 @@ This document explains how to use Scrum for the Keek AI project. Keek AI is a si
 
 ---
 
-## 🏃 Task Management Cycle
+## 🏃 Sprint Cycle
 
-### Task Structure
+A sprint is a 1-2 week planning period containing multiple stories, each with tasks.
 
-Each task in `tasks/` contains:
-- **ID**: Unique identifier (TASK-001, TASK-002, etc.)
-- **Title**: Clear description of work
-- **Owner**: Current role responsible for execution
-- **Status**: planned | in-progress | done
-- **Acceptance Criteria**: Definition of done
-- **Role**: Which persona should own this (Producer, PM, Dev, QA, Ops)
-
-### Task Workflow
+### Sprint Structure
 
 ```
-1. PLANNED
-   ↓
-2. Pick task by priority
-   ↓
-3. Change status to IN-PROGRESS
-   ↓
-4. Read acceptance criteria
-   ↓
-5. Execute in your assigned role
-   ↓
-6. Update logs/ with progress
-   ↓
-7. Change status to DONE
-   ↓
-8. Post update to Discord
+Sprint 1: Web App Foundation (2 weeks)
+├── Story 1: Project Setup (5 points)
+│   ├── Task 1: Initialize repo and build system
+│   ├── Task 2: Setup CI/CD pipeline
+│   └── Task 3: Configure dev environment
+├── Story 2: Core Components (8 points)
+│   ├── Task 1: Build UI framework
+│   ├── Task 2: Implement state management
+│   ├── Task 3: Create API client
+│   └── Task 4: Setup testing framework
+└── Story 3: Testing & Deployment (5 points)
+    ├── Task 1: Write test suite
+    ├── Task 2: Setup staging environment
+    └── Task 3: Deploy to production
 ```
 
-### Daily Cycle
+### Sprint Phases
 
-**Morning (Planning)**:
-- Review `tasks/` for high-priority planned work
-- Assign task to yourself by updating status
-- Read specification and acceptance criteria
-- Update `logs/` with start time and target completion
-
-**Throughout Day (Execution)**:
-- Execute work per task specification
-- Commit code with task ID reference (e.g., "TASK-042: implement user auth")
-- Update `logs/` with progress milestones
-- Document blockers in task file
-
-**End of Day (Handoff)**:
-- If continuing tomorrow, update task with "in-progress" status
-- If complete, change status to "done"
-- Post summary to Discord with timestamp
-- Move to next task
-
-### Blockers & Escalation
-
-If task is blocked:
-1. Document blocker in task file with timestamp
-2. Post to Discord #control channel with @producer mention
-3. Producer routes blocker request to appropriate role
-4. Continue with unblocked tasks while waiting
-
----
-
-## 🔄 Sprint Planning (Weekly)
-
-### Weekly Planning Session (1 hour)
-
-**Goal**: Review progress, plan next week, identify blockers
+#### 1. Sprint Planning (1-2 hours)
+**Goal**: Define stories and plan the sprint
 
 **Activities**:
-- Review completed tasks from past week
-- Review in-progress tasks
-- Calculate velocity (tasks completed / week)
-- Review backlog for next week's priorities
-- Create new task definitions if needed
-- Set priority order
-- Update sprint folder with status
+- Review project backlog
+- Estimate story points (using Fibonacci: 1, 2, 3, 5, 8, 13)
+- Assign stories to sprint
+- Break each story into tasks
+- Create story folders and task files
+- Set acceptance criteria for each story
 
 **Output**:
-- Updated task list with clear priorities
-- Any new tasks defined with acceptance criteria
-- Blockers identified and escalated
+- Sprint folder created with README
+- Story folders created with acceptance criteria
+- Task files defined (STORY_NN_TASK_MM.md)
+- Sprint goal documented
+
+#### 2. Sprint Execution (1-2 weeks)
+**Goal**: Complete stories through their tasks
+
+**Daily Activities**:
+- Pick highest priority incomplete task
+- Read task description and dependencies
+- Implement per task specification
+- Test against story's acceptance criteria
+- Update task status and log progress
+- Commit with story/task reference
+
+**Story Workflow**:
+```
+1. Story in PLANNED status
+   ↓
+2. Pick highest priority uncompleted task
+   ↓
+3. Read STORY_XX_TASK_MM.md
+   ↓
+4. Implement feature (following IMPLEMENTATION_NOTES.md)
+   ↓
+5. Test against TESTING_CHECKLIST.md
+   ↓
+6. If all tasks done → Story DONE
+   ↓
+7. Move to next story
+```
+
+#### 3. Sprint Review (30-60 minutes)
+**Goal**: Demonstrate completed stories and gather feedback
+
+**Activities**:
+- Demo each completed story
+- Verify acceptance criteria met
+- Get stakeholder feedback
+- Document lessons learned
+- Calculate velocity (story points completed / 2 weeks)
+- Plan next sprint improvements
+
+**Output**:
+- Sprint completion summary in sprint README
+- Velocity metrics for next planning
 ```
 1. Story TODO → IN PROGRESS
 2. Implement features

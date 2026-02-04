@@ -46,68 +46,51 @@ Persistence:
 ## 📂 Folder Structure
 
 ```
-scrum/
-├── README.md                           # This file - master guide
-├── SCRUM_PROCESS.md                    # How to use Scrum in this project
-├── PROJECT_OVERVIEW.md                 # Current project context and goals
-├── SPRINT_1_COMPLETE_STORYPITCH/       # Sprint 1 folder
-│   ├── README.md                       # Sprint overview
-│   ├── STORY_01_COMPLETE_CONTEXT/      # Story subfolder
-│   │   ├── README.md                   # Story details
-│   │   ├── ACCEPTANCE_CRITERIA.md      # Definition of done
-│   │   ├── IMPLEMENTATION_NOTES.md     # Technical details
-│   │   └── TESTING_CHECKLIST.md        # QA checklist
-│   ├── STORY_02_COMPLETE_COMPONENTS/
-│   │   └── ...
-│   └── STORY_03_REMOVE_REGIONS/
-│       └── ...
-├── SPRINT_2_ADMIN_PROMPT_SYSTEM/       # Sprint 2 folder
-│   ├── README.md
-│   ├── STORY_01_DATABASE_SCHEMA/
-│   │   └── ...
-│   ├── STORY_02_BACKEND_ENDPOINTS/
-│   │   └── ...
-│   ├── STORY_03_FRONTEND_SERVICE/
-│   │   └── ...
-│   ├── STORY_04_ADMIN_UI/
-│   │   └── ...
-│   └── STORY_05_INTEGRATION/
-│       └── ...
-├── SPRINT_3_AI_CONFIG_SYSTEM/          # Sprint 3 folder
-│   ├── README.md
-│   ├── STORY_01_CONFIG_DATABASE/
-│   │   └── ...
-│   ├── STORY_02_BACKEND_API/
-│   │   └── ...
-│   ├── STORY_03_FRONTEND_SERVICE/
-│   │   └── ...
-│   ├── STORY_04_ADMIN_CONFIG_UI/
-│   │   └── ...
-│   └── STORY_05_RUNTIME_INTEGRATION/
-│       └── ...
-├── SPRINT_4_INTEGRATION_TESTING/       # Sprint 4 folder
-│   └── ...
-├── SPRINT_5_STREAMING_IMPROVEMENTS/    # Sprint 5 folder (IN PROGRESS)
-│   ├── README.md
-│   └── STORY_01_STREAMING_ATTRIBUTE_PRIORITY/
+docs/SCRUM/
+├── README.md                                    # This file
+├── SCRUM_PROCESS.md                             # Process guide
+├── PROJECT_OVERVIEW.md                          # Project context
+├── VISUAL_OVERVIEW.md                           # Architecture diagrams
+│
+├── SPRINT_1_WEB_APP_FOUNDATION/                 # Sprint folder
+│   ├── README.md                                # Sprint overview & goals
+│   ├── STORY_01_PROJECT_SETUP/
+│   │   ├── README.md                            # Story description
+│   │   ├── ACCEPTANCE_CRITERIA.md               # Definition of done
+│   │   ├── IMPLEMENTATION_NOTES.md              # Technical details
+│   │   ├── TESTING_CHECKLIST.md                 # QA verification
+│   │   ├── STORY_01_TASK_01.md                  # Subtask 1
+│   │   ├── STORY_01_TASK_02.md                  # Subtask 2
+│   │   └── STORY_01_TASK_03.md                  # Subtask 3
+│   │
+│   ├── STORY_02_CORE_COMPONENTS/
+│   │   ├── README.md
+│   │   ├── ACCEPTANCE_CRITERIA.md
+│   │   ├── STORY_02_TASK_01.md
+│   │   ├── STORY_02_TASK_02.md
+│   │   └── STORY_02_TASK_03.md
+│   │
+│   └── STORY_03_TESTING_DEPLOYMENT/
 │       ├── README.md
 │       ├── ACCEPTANCE_CRITERIA.md
-│       ├── IMPLEMENTATION_NOTES.md
-│       └── TESTING_CHECKLIST.md
-└── SPRINT_6_ENTITY_VOTING_CHATBOT/     # Sprint 6 folder (COMPLETE)
-    ├── README.md
+│       ├── STORY_03_TASK_01.md
+│       └── STORY_03_TASK_02.md
+│
+└── SPRINT_2_[FUTURE]/                           # Next sprint folder
     └── ...
-└── SPRINT_7_CREATE_SCREEN/             # Sprint 7 folder (IN PROGRESS)
-    ├── README.md
-    └── ...
-└── SPRINT_8_COMMENTS_SYSTEM/           # Sprint 8 folder (PLANNING)
-    ├── README.md
-    ├── ACCEPTANCE_CRITERIA.md
-    ├── TESTING_CHECKLIST.md
-    ├── STORY_02_FRONTEND_SERVICE/
-    │   └── README.md
-    ├── STORY_03_COMMENT_CONTEXT/
-    │   └── README.md
+```
+
+### File Naming Convention
+
+- **Sprints**: `SPRINT_N_[DESCRIPTION]/` (planning and review scope)
+- **Stories**: `STORY_NN_[DESCRIPTION]/` (larger deliverable, multiple tasks)
+- **Tasks**: `STORY_NN_TASK_MM.md` (granular subtasks within a story)
+- **Metadata**: Each story folder contains:
+  - `README.md` - Story description and context
+  - `ACCEPTANCE_CRITERIA.md` - Definition of done
+  - `IMPLEMENTATION_NOTES.md` - Technical approach
+  - `TESTING_CHECKLIST.md` - QA verification steps
+  - `STORY_NN_TASK_MM.md` - Individual subtasks
     └── STORY_04_UI_COMPONENTS/
         └── README.md
 ```
