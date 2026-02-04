@@ -76,7 +76,7 @@
 
 **Studio Directories**:
 ```
-c:\Users\Keek_AI\Documents\Keek AI\
+<workspace_root>/
 ├── docs/          ← Project specs and plans
 ├── prompts/       ← Role definitions and agent prompts
 ├── tasks/         ← Task definitions and state

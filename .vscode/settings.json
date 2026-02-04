@@ -1,13 +1,17 @@
 {
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.windows": "pwsh",
   "terminal.integrated.profiles.windows": {
-    "PowerShell": {
+    "pwsh": {
+      "path": "pwsh.exe",
+      "icon": "terminal-powershell"
+    },
+    "PowerShell 5": {
       "source": "PowerShell",
-      "icon": "terminal-powershell",
-      "args": ["-NoExit", "-Command", "& {Import-Module posh-git}"]
+      "icon": "terminal-powershell"
     }
   },
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.shellIntegration.decorationsEnabled": "both",
-  "terminal.integrated.shellIntegration.suggestEnabled": true
+  "terminal.integrated.shellIntegration.suggestEnabled": true,
+  "terminal.integrated.focusAfterRun": "terminal"
 }

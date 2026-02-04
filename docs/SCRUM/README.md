@@ -49,15 +49,25 @@ Persistence:
 docs/SCRUM/
 ├── README.md                                    # This file
 ├── SCRUM_PROCESS.md                             # Process guide
+├── SPRINT_EXECUTION_GUIDE.md                    # Quick reference for sprint execution
+├── BUG_TRACKING.md                              # Bug tracking process & rules
 ├── PROJECT_OVERVIEW.md                          # Project context
 ├── VISUAL_OVERVIEW.md                           # Architecture diagrams
 │
-├── SPRINT_1_WEB_APP_FOUNDATION/                 # Sprint folder
-│   ├── README.md                                # Sprint overview & goals
-│   ├── STORY_01_PROJECT_SETUP/
-│   │   ├── README.md                            # Story description
-│   │   ├── ACCEPTANCE_CRITERIA.md               # Definition of done
-│   │   ├── IMPLEMENTATION_NOTES.md              # Technical details
+├── SPRINT_01_OPENCLAW_SETUP/                    # Current sprint
+│   ├── SPRINT_OVERVIEW.md                       # Sprint goal & acceptance criteria
+│   ├── STORY_01_INSTALL_OPENCLAW/
+│   │   ├── STORY_OVERVIEW.md                    # Story description
+│   │   └── STORY_01_TASK_*.md                   # Task files
+│   ├── STORY_02_CONFIGURE_DISCORD/
+│   └── STORY_03_VALIDATE_ACCEPTANCE/
+
+bugs/                                            # Bug tracking folder
+├── README.md                                    # Bug tracking overview
+└── BUG_NNN_description/                         # Individual bug folders
+    ├── DESCRIPTION.md                           # Bug details
+    ├── FIXED.md                                 # Resolution (when fixed)
+    └── FAILURES.txt                             # Failed attempts log
 │   │   ├── TESTING_CHECKLIST.md                 # QA verification
 │   │   ├── STORY_01_TASK_01.md                  # Subtask 1
 │   │   ├── STORY_01_TASK_02.md                  # Subtask 2
