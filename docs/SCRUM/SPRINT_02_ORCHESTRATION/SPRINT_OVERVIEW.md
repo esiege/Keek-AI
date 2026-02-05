@@ -20,8 +20,8 @@ Started: 2026-02-04
 | ID | Story | Points | Status |
 |----|-------|--------|--------|
 | S01 | Define Orchestration Architecture | 3 | Done ✅ |
-| S02 | Create Agent Persona Framework | 5 | In Review |
-| S03 | Build Turn Manager | 8 | In Progress |
+| S02 | Create Agent Persona Framework | 5 | Done ✅ |
+| S03 | Build Turn Manager | 8 | In Review |
 | S04 | Discord Channel Routing | 5 | In Progress |
 | S05 | Validate with 2-Agent Demo | 3 | In Progress |
 
