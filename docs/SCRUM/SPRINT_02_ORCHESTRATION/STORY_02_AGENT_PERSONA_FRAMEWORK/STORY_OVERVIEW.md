@@ -20,7 +20,7 @@
 
 ## User Story
 
-As a **studio operator**, I want to **define agent personas with distinct roles, personalities, and capabilities** so that **each agent behaves appropriately for their function**.
+As a **user in Discord**, I want to **see PM and Dev as distinct agents** so that **I can tell who is responding during turn-based collaboration**.
 
 ---
 
