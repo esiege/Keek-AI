@@ -24,8 +24,16 @@ Started: 2026-02-04
 | S03 | Build Turn Manager | 8 | In Review |
 | S04 | Discord Channel Routing | 5 | In Progress |
 | S05 | Validate with 2-Agent Demo | 3 | In Progress |
+| S06 | Single Dockerized Agent (PoC) | 5 | TODO |
+| S07 | Reusable Agent Container Template | 8 | TODO |
 
-**Total Points**: 24
+**Total Points**: 37
+
+### Architecture Pivot (2026-02-05)
+Stories S06-S07 replace the webhook-based approach with Docker containers. Each agent runs its own OpenClaw instance with a dedicated Discord bot, providing:
+- Real Discord presence (sidebar visibility)
+- True context isolation
+- Reproducible agent environments
 
 ---
 
