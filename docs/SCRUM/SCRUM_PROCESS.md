@@ -16,6 +16,39 @@ This document explains how to use Scrum for the Keek AI project. Keek AI is a si
 
 ## 🔄 Scrum Framework
 
+### Story Acceptance Format
+
+When presenting a story for review, use this concise format:
+
+```
+**Story [N]: [Title]**
+
+**Description:** [One sentence summary of what was delivered]
+
+**Acceptance Criteria:**
+1. [Testable outcome 1]
+2. [Testable outcome 2]
+3. [Testable outcome 3]
+
+✅ All criteria met and demoed.
+```
+
+**Example:**
+```
+**Story 02: Agent Persona Framework**
+
+**Description:** PM and Dev appear as distinct users in Discord via webhooks.
+
+**Acceptance Criteria:**
+1. PM posts show username "PM" with unique avatar
+2. Dev posts show username "Dev" with different avatar
+3. Both use same webhook (scales to 100+ agents)
+
+✅ All criteria met and demoed.
+```
+
+---
+
 ### Core Principles
 
 1. **Task-Based Coordination** - Work moves through explicit task objects with clear ownership
