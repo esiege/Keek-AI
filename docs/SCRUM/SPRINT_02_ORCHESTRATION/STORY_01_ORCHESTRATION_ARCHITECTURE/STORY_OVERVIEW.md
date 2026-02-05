@@ -13,7 +13,7 @@
 |------|-------------|--------|
 | TASK_01 | Define State Machine | Done |
 | TASK_02 | Define Data Structures | Done |
-| TASK_03 | Document Message Flow | TODO |
+| TASK_03 | Document Message Flow | Done |
 | TASK_04 | Write Architecture Doc | TODO |
 
 ---

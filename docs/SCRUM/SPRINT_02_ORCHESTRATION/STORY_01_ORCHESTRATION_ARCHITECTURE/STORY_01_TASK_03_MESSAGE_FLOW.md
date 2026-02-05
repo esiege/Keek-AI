@@ -2,7 +2,7 @@
 
 **Story**: 01 - Orchestration Architecture  
 **Task ID**: STORY_01_TASK_03  
-**Status**: TODO
+**Status**: Done
 
 ## Objective
 Create sequence diagrams showing how messages flow through the orchestration system.
@@ -44,8 +44,18 @@ Document: Agent fails or times out
 - Clear flow for each scenario
 
 ## Acceptance Check
-- [ ] Basic message flow documented
-- [ ] Turn handoff flow documented
-- [ ] Human interrupt flow documented
-- [ ] Error/timeout flow documented
-- [ ] Diagrams are clear and readable
+- [x] Basic message flow documented
+- [x] Turn handoff flow documented
+- [x] Human interrupt flow documented
+- [x] Error/timeout flow documented
+- [x] Diagrams are clear and readable
+
+## Results (2026-02-04)
+Created `MESSAGE_FLOW.md` with:
+- 6 sequence diagrams (ASCII art)
+- Basic message flow: user → agent → response
+- Turn handoff: TURN_COMPLETE detection and queue advancement
+- Timeout flow: forced turn end with notice
+- Human interrupt: 3 modes (inject, queue, interrupt)
+- Error recovery: crash handling and queue continuity
+- Multi-agent collaboration example (PM + Dev)
