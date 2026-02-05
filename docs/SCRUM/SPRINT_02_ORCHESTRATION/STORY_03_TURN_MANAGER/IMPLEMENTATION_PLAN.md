@@ -168,6 +168,78 @@ POST https://discord.com/api/webhooks/1468891325683204261/...
 
 ---
 
+## Bot Profiles System
+
+### Concept
+Bots have persistent profiles (simpler than Keek's full context). Each bot gets:
+- Personality definition
+- Role/skills
+- Own memory files (text-based, like Keek but lighter)
+
+### Profile Structure
+```
+orchestration/bots/
+├── pm/
+│   ├── PROFILE.md      # Personality, role, skills
+│   ├── MEMORY.md       # Bot's persistent memory
+│   └── config.json     # Technical config (avatar, etc.)
+├── dev/
+│   ├── PROFILE.md
+│   ├── MEMORY.md
+│   └── config.json
+└── ...
+```
+
+### Create Command Flow
+`!create bot` walks through:
+1. **Name**: What's the bot called?
+2. **Role**: What's their job? (PM, Dev, QA, etc.)
+3. **Personality**: How do they communicate?
+4. **Skills**: What are they good at?
+5. **Avatar**: Image URL (or use default)
+
+Creates the folder structure and initial files.
+
+### Profile Template (PROFILE.md)
+```markdown
+# [Bot Name]
+
+## Role
+[One line description]
+
+## Personality
+- Tone: [e.g., professional, casual, technical]
+- Style: [e.g., uses bullet points, asks questions]
+
+## Skills
+- [Skill 1]
+- [Skill 2]
+
+## Boundaries
+- Can: [what they do]
+- Cannot: [what they don't do]
+```
+
+### Memory (MEMORY.md)
+Bot's own persistent memory - learnings, preferences, notes.
+Much simpler than Keek's MEMORY.md. Updated by the bot during sessions.
+
+---
+
+## Commands Summary
+
+| Command | Action |
+|---------|--------|
+| `!orc on` | Enable orchestration |
+| `!orc off` | Disable orchestration |
+| `!assign <bot>` | Add bot to queue |
+| `!remove <bot>` | Remove from queue |
+| `!status` | Show queue and active bot |
+| `!create bot` | Create new bot profile (interactive) |
+| `!list bots` | Show all available bots |
+
+---
+
 ## Notes
 
 - Take it slow, get each piece working before moving on
