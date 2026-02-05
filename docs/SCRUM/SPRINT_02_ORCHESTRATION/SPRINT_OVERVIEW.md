@@ -6,7 +6,7 @@ Build the core infrastructure for multi-agent turn-based coordination in Discord
 ## Acceptance Criteria
 **Definition of Done**: Two AI agent personas (PM + Dev) successfully take turns responding to a task in a Discord channel, with clear turn handoffs and state tracking.
 
-**STATUS**: 🔄 IN PROGRESS
+**STATUS**: ✅ COMPLETE
 
 ## Sprint Duration
 Target: 1-2 weeks
@@ -22,8 +22,8 @@ Started: 2026-02-04
 | S01 | Define Orchestration Architecture | 3 | Done |
 | S02 | Create Agent Persona Framework | 5 | Done |
 | S03 | Build Turn Manager | 8 | Done |
-| S04 | Discord Channel Routing | 5 | TODO |
-| S05 | Validate with 2-Agent Demo | 3 | TODO |
+| S04 | Discord Channel Routing | 5 | Done |
+| S05 | Validate with 2-Agent Demo | 3 | Done |
 
 **Total Points**: 24
 

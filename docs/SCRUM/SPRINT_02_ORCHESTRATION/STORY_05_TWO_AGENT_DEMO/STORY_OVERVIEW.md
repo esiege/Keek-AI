@@ -2,8 +2,16 @@
 
 **Story ID**: S05
 **Story Points**: 3
-**Status**: TODO
+**Status**: Done
 **Sprint**: Sprint 2 - Orchestration
+
+---
+
+## Tasks
+
+| Task | Description | Status |
+|------|-------------|--------|
+| TASK_01 | Create Demo Script | Done |
 
 ---
 
