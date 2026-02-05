@@ -4,9 +4,9 @@
 As a Keek AI studio operator, I want to verify OpenClaw can execute system commands so that it can actually "do things" on this machine.
 
 ## Acceptance Criteria
-- [ ] OpenClaw has shell/system access enabled
-- [ ] Send Discord message requesting to open MS Paint
-- [ ] MS Paint opens on this Windows machine
+- [x] OpenClaw has shell/system access enabled
+- [x] Send Discord message requesting to open MS Paint
+- [x] MS Paint opens on this Windows machine
 
 ## Story Points: 1
 
@@ -14,8 +14,8 @@ As a Keek AI studio operator, I want to verify OpenClaw can execute system comma
 
 | ID | Task | Status |
 |----|------|--------|
-| T01 | Enable Shell/System Access | Not Started |
-| T02 | Test MS Paint Command | Not Started |
+| T01 | Enable Shell/System Access | Done |
+| T02 | Test MS Paint Command | Done |
 
 ## Technical Notes
 - OpenClaw has a "bash" integration for shell commands

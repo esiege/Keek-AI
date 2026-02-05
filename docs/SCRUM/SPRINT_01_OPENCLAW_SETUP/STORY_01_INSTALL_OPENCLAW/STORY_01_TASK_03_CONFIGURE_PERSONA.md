@@ -2,7 +2,39 @@
 
 **Story**: 01 - Install OpenClaw  
 **Task ID**: STORY_01_TASK_03  
-**Status**: Not Started
+**Status**: Done
+
+## Results (2026-02-04)
+
+### Gateway Configuration
+- **Gateway Target**: `ws://127.0.0.1:18789`
+- **Source**: local loopback
+- **Config**: `~\.openclaw\openclaw.json`
+- **Bind**: loopback
+
+### Control UI
+- **Web UI**: http://127.0.0.1:18789/
+- **Gateway WS**: ws://127.0.0.1:18789
+- **Token**: Stored locally (do not commit)
+
+### Optional Features (Not Configured)
+- Web search requires Brave Search API key
+- Mobile apps available (iOS/Android) for camera/canvas
+- macOS app for system notifications
+
+### Helpful Commands
+```powershell
+openclaw configure --section web    # Add web search
+openclaw security audit --deep      # Security check
+openclaw dashboard                  # Open Control UI
+```
+
+### Documentation Links
+- Health: https://docs.openclaw.ai/gateway/health
+- Troubleshooting: https://docs.openclaw.ai/gateway/troubleshooting
+- Control UI: https://docs.openclaw.ai/web/control-ui
+- Security: https://docs.openclaw.ai/security
+- Workspace: https://docs.openclaw.ai/concepts/agent-workspace
 
 ## Objective
 Complete OpenClaw persona setup and verify basic functionality.

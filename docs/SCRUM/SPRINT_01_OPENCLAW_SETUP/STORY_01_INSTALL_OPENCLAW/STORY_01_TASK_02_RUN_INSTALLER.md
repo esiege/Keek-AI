@@ -2,7 +2,16 @@
 
 **Story**: 01 - Install OpenClaw  
 **Task ID**: STORY_01_TASK_02  
-**Status**: Not Started
+**Status**: Done
+
+## Results (2026-02-04)
+
+| Component | Status |
+|-----------|--------|
+| Node.js | v24.13.0 installed |
+| OpenClaw | v2026.2.2-3 (9c5941b) |
+| Workspace | `~\.openclaw\workspace` |
+| Config | `~\.openclaw\openclaw.json` |
 
 ## Objective
 Install OpenClaw using the official Windows installer.
