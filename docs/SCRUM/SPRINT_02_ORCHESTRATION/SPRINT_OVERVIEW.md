@@ -21,7 +21,7 @@ Started: 2026-02-04
 |----|-------|--------|--------|
 | S01 | Define Orchestration Architecture | 3 | Done |
 | S02 | Create Agent Persona Framework | 5 | Done |
-| S03 | Build Turn Manager | 8 | TODO |
+| S03 | Build Turn Manager | 8 | Done |
 | S04 | Discord Channel Routing | 5 | TODO |
 | S05 | Validate with 2-Agent Demo | 3 | TODO |
 
