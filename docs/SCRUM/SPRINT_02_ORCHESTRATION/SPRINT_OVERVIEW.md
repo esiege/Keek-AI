@@ -24,7 +24,7 @@ Started: 2026-02-04
 | S03 | Build Turn Manager | 8 | In Review |
 | S04 | Discord Channel Routing | 5 | In Progress |
 | S05 | Validate with 2-Agent Demo | 3 | In Progress |
-| S06 | Single Dockerized Agent (PoC) | 5 | TODO |
+| S06 | Single Dockerized Agent (PoC) | 5 | Done ✅ |
 | S07 | Reusable Agent Container Template | 8 | TODO |
 
 **Total Points**: 37
