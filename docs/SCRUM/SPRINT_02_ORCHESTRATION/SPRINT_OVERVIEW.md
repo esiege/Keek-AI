@@ -16,7 +16,7 @@ Started: 2026-02-04
 
 | ID | Story | Points | Status |
 |----|-------|--------|--------|
-| S01 | Define Orchestration Architecture | 3 | In Progress |
+| S01 | Define Orchestration Architecture | 3 | Done |
 | S02 | Create Agent Persona Framework | 5 | TODO |
 | S03 | Build Turn Manager | 8 | TODO |
 | S04 | Discord Channel Routing | 5 | TODO |

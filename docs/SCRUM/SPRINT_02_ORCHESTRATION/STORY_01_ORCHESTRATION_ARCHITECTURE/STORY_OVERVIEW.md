@@ -2,7 +2,7 @@
 
 **Story ID**: S01
 **Story Points**: 3
-**Status**: In Progress
+**Status**: Done
 **Sprint**: Sprint 2 - Orchestration
 
 ---
@@ -14,7 +14,7 @@
 | TASK_01 | Define State Machine | Done |
 | TASK_02 | Define Data Structures | Done |
 | TASK_03 | Document Message Flow | Done |
-| TASK_04 | Write Architecture Doc | TODO |
+| TASK_04 | Write Architecture Doc | Done |
 
 ---
 
