@@ -2,7 +2,7 @@
 
 **Story**: 01 - Orchestration Architecture  
 **Task ID**: STORY_01_TASK_01  
-**Status**: TODO
+**Status**: Done
 
 ## Objective
 Design and document the agent state machine — all possible states and transitions.
@@ -40,7 +40,16 @@ Visual diagram showing:
 - Visual diagram included
 
 ## Acceptance Check
-- [ ] All states defined with descriptions
-- [ ] All transitions documented
-- [ ] Diagram created (ASCII or Mermaid)
-- [ ] Edge cases addressed
+- [x] All states defined with descriptions
+- [x] All transitions documented
+- [x] Diagram created (ASCII or Mermaid)
+- [x] Edge cases addressed
+
+## Results (2026-02-04)
+Created `STATE_MACHINE.md` with:
+- 5 states: OFFLINE, IDLE, QUEUED, ACTIVE, WAITING
+- Full transition table with triggers and actions
+- ASCII state diagram
+- 6 edge cases documented (crash, timeout, interrupt, etc.)
+- Configuration options for timeout and interrupt modes
+- Logging requirements
