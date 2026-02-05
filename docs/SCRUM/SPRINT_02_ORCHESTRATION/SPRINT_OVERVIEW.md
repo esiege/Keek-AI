@@ -13,7 +13,7 @@ Target: 1-2 weeks
 Started: 2026-02-04
 
 ## AI Scrum Rule
-**1 Sprint = 1 Unit of Work.** Complete ALL stories in a sprint before stopping for review. No partial sprints.
+**Review each story** before moving to the next. Quality over speed.
 
 ## Stories
 

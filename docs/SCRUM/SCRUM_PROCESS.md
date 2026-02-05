@@ -24,7 +24,7 @@ This document explains how to use Scrum for the Keek AI project. Keek AI is a si
 4. **Explicit Handoffs** - One task owner at a time; handoff documented when role changes
 5. **Transparent Progress** - Discord updates on blockers and completions
 6. **Documentation First** - Write acceptance criteria before implementing
-7. **Sprint = Unit of Work** - AI agents complete ALL stories in a sprint before stopping for review. No partial sprints.
+7. **Story Review** - Review each story with human before moving to next. Quality over speed.
 
 ---
 
