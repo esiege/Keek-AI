@@ -7,6 +7,17 @@
 
 ---
 
+## Tasks
+
+| Task | Description | Status |
+|------|-------------|--------|
+| TASK_01 | Define State Machine | TODO |
+| TASK_02 | Define Data Structures | TODO |
+| TASK_03 | Document Message Flow | TODO |
+| TASK_04 | Write Architecture Doc | TODO |
+
+---
+
 ## User Story
 
 As a **studio architect**, I want a **clear documented architecture for turn-based agent orchestration** so that **all future implementation has a solid foundation and shared understanding**.
