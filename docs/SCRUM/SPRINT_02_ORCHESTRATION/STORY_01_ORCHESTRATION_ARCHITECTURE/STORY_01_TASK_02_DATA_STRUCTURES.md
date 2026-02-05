@@ -2,7 +2,7 @@
 
 **Story**: 01 - Orchestration Architecture  
 **Task ID**: STORY_01_TASK_02  
-**Status**: TODO
+**Status**: Done
 
 ## Objective
 Design JSON schemas for all orchestration data: agent config, turn queue, state persistence.
@@ -54,8 +54,17 @@ Create example instances for each schema showing real data.
 - Example instances for each
 
 ## Acceptance Check
-- [ ] Agent config schema defined
-- [ ] Turn queue schema defined
-- [ ] State file schema defined
-- [ ] Examples provided for each
-- [ ] Schemas are valid JSON
+- [x] Agent config schema defined
+- [x] Turn queue schema defined (part of channel config)
+- [x] State file schema defined
+- [x] Examples provided for each
+- [x] Schemas are valid JSON
+
+## Results (2026-02-04)
+Created `DATA_STRUCTURES.md` with:
+- AgentConfig schema with full persona definition
+- ChannelConfig schema with routing modes
+- OrchestrationState schema for runtime persistence
+- Example PM and Dev agent configs
+- File location conventions
+- Validation rules
