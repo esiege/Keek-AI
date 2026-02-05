@@ -2,8 +2,19 @@
 
 **Story ID**: S02
 **Story Points**: 5
-**Status**: TODO
+**Status**: Done
 **Sprint**: Sprint 2 - Orchestration
+
+---
+
+## Tasks
+
+| Task | Description | Status |
+|------|-------------|--------|
+| TASK_01 | Define Persona Schema | Done |
+| TASK_02 | Create PM Persona | Done |
+| TASK_03 | Create Dev Persona | Done |
+| TASK_04 | Document Persona Loading | Done |
 
 ---
 

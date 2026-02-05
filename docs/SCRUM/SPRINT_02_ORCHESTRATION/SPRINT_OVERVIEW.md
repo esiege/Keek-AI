@@ -12,12 +12,15 @@ Build the core infrastructure for multi-agent turn-based coordination in Discord
 Target: 1-2 weeks
 Started: 2026-02-04
 
+## AI Scrum Rule
+**1 Sprint = 1 Unit of Work.** Complete ALL stories in a sprint before stopping for review. No partial sprints.
+
 ## Stories
 
 | ID | Story | Points | Status |
 |----|-------|--------|--------|
 | S01 | Define Orchestration Architecture | 3 | Done |
-| S02 | Create Agent Persona Framework | 5 | TODO |
+| S02 | Create Agent Persona Framework | 5 | Done |
 | S03 | Build Turn Manager | 8 | TODO |
 | S04 | Discord Channel Routing | 5 | TODO |
 | S05 | Validate with 2-Agent Demo | 3 | TODO |
