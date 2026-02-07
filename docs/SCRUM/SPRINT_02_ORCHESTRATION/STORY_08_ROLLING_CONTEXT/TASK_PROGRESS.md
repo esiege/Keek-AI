@@ -1,8 +1,8 @@
 # Story 08: Task Progress Tracker
 
-**Last Updated:** 2026-02-07 02:15 PST
+**Last Updated:** 2026-02-07 02:20 PST
 
-## Current Status: IN PROGRESS
+## Current Status: READY FOR TESTING
 
 ## Completed Tasks
 
@@ -48,4 +48,46 @@
 - 70% threshold = severe consequences (session reset)
 
 ## Session Context Watch
-Current context: Monitoring - will clip if approaching 70%
+Current context: 56% (admin-chat session at 2:17 AM PST)
+
+## Completion Summary
+
+### What Was Built
+
+1. **Ollama Setup**
+   - Model: `llama3.2:3b` (2.0 GB)
+   - Response time: ~4.4s on CPU
+   - API endpoint: `http://localhost:11434`
+
+2. **context-compressor Hook** (`~/.openclaw/hooks/context-compressor/`)
+   - Fires on `agent:bootstrap` event
+   - Checks context percentage against thresholds (50%/70%/85%)
+   - Calls Ollama to summarize content when over threshold
+   - Modifies bootstrapFiles in-place before Claude sees them
+   - Logs compression events to InfluxDB
+
+3. **Agent Customization**
+   - Agents can create `COMPRESSION.md` in workspace
+   - Defines what to preserve vs summarize
+   - Different aggressiveness levels per zone
+
+4. **Supporting Files**
+   - `COMPRESSION.md` - Keek's compression preferences
+   - `update-agent-bios.js` - Discord bio updater for all agents
+
+### What's Needed to Activate
+
+1. **Gateway Restart** - Hook is enabled but won't activate until gateway restarts
+2. **Testing** - Verify hook triggers at 50%+ context
+3. **Agent COMPRESSION.md Files** - Create for other agents (Pearl, Chip, etc.)
+
+### Files Created/Modified
+
+- `~/.openclaw/hooks/context-compressor/HOOK.md`
+- `~/.openclaw/hooks/context-compressor/handler.js`
+- `~/.openclaw/hooks/context-compressor/package.json`
+- `~/.openclaw/workspace/COMPRESSION.md`
+- `~/.openclaw/workspace/update-agent-bios.js`
+- `docs/SCRUM/.../STORY_08_ROLLING_CONTEXT/TASK_PROGRESS.md`
+- `docs/SCRUM/.../STORY_08_ROLLING_CONTEXT/OLLAMA_STATUS_REPORT.md`
+- `docs/SCRUM/.../STORY_08_ROLLING_CONTEXT/INVESTIGATION_FINDINGS.md`
