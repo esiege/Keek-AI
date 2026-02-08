@@ -26,8 +26,9 @@ Started: 2026-02-04
 | S05 | Validate with 2-Agent Demo | 3 | In Progress |
 | S06 | Single Dockerized Agent (PoC) | 5 | Done ✅ |
 | S07 | Reusable Agent Container Template | 8 | TODO |
+| S08 | Rolling Context Management | 5 | TODO |
 
-**Total Points**: 37
+**Total Points**: 42
 
 ### Architecture Pivot (2026-02-05)
 Stories S06-S07 replace the webhook-based approach with Docker containers. Each agent runs its own OpenClaw instance with a dedicated Discord bot, providing:

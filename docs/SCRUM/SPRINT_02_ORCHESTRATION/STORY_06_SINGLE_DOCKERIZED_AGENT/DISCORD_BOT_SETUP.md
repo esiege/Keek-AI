@@ -67,16 +67,31 @@ Bot should now appear in server member list.
 
 ---
 
-## Example: PM Agent
+## Example: PM Agent (Pearl)
+
+**Created:** 2026-02-05 | **Renamed:** 2026-02-05
+
+| Field | Value |
+|-------|-------|
+| Application ID | 1469026037110407340 |
+| Bot Username | [PM] - Pearl#3743 |
+| Token Storage | Credential Manager: `PM_Agent_Discord` |
+| Invite URL | https://discord.com/oauth2/authorize?client_id=1469026037110407340&permissions=8&scope=bot |
+| Server | Keek Dev Studio |
+| Intents | Message Content ✅ |
+
+---
+
+## Example: Dev Agent (Chip)
 
 **Created:** 2026-02-05
 
 | Field | Value |
 |-------|-------|
-| Application ID | 1469026037110407340 |
-| Bot Username | PM Agent#3743 |
-| Token Storage | Credential Manager: `PM_Agent_Discord` |
-| Invite URL | https://discord.com/oauth2/authorize?client_id=1469026037110407340&permissions=8&scope=bot |
+| Application ID | 1469048663711158567 |
+| Bot Username | [Dev] - Chip#8440 |
+| Token Storage | Credential Manager: `Dev_Agent_Discord` |
+| Invite URL | https://discord.com/oauth2/authorize?client_id=1469048663711158567&permissions=8&scope=bot |
 | Server | Keek Dev Studio |
 | Intents | Message Content ✅ |
 

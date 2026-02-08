@@ -123,6 +123,7 @@ networks:
   "channels": {
     "discord": {
       "enabled": true,
+      "allowBots": true,
       "token": "<DISCORD_BOT_TOKEN>",
       "groupPolicy": "open",
       "guilds": {
@@ -179,9 +180,12 @@ Location: `agents/pm/agents/main/agent/auth-profiles.json`
 
 ## Step 6: Create SOUL.md
 
-Location: `agents/pm/workspace/SOUL.md`
+Location: `agents/<agent>/workspace/SOUL.md`
 
-This defines the agent's personality. Example for PM Agent:
+This defines the agent's personality. Use the template at:
+`STORY_07_REUSABLE_AGENT_TEMPLATE/AGENT_SOUL_TEMPLATE.md`
+
+Example for PM Agent:
 
 ```markdown
 # SOUL.md - PM Agent
@@ -237,6 +241,24 @@ When a user first messages the bot, they'll get a pairing code. Approve it:
 ```bash
 docker exec pm-agent openclaw pairing approve discord <CODE>
 ```
+
+## Multi-Agent Communication
+
+**CRITICAL**: For agents to see each other's messages, add `allowBots: true` to the Discord config:
+
+```json
+"channels": {
+  "discord": {
+    "enabled": true,
+    "allowBots": true,  // Required for multi-agent setups!
+    ...
+  }
+}
+```
+
+Without this setting, OpenClaw filters out bot messages by default (to prevent loops). In a multi-agent setup where you WANT agents to communicate, you need this enabled.
+
+**Warning**: With `allowBots: true`, ensure agents don't create reply loops. Use clear turn protocols (like `TURN_COMPLETE`) and/or `requireMention` to control who responds.
 
 ## Troubleshooting
 
