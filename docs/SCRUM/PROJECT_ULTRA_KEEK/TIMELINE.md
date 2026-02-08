@@ -40,7 +40,28 @@ Building infrastructure to safely test local Ollama models before promoting to p
 4. Run test conversations
 5. If stable, promote to production agents
 
-### Key Learning
+### Key Learnings
 - Session corruption requires complete reset, not incremental fixes
 - Guinea pig agent isolates production from testing risk
 - Context monitoring caught corruption early
+
+### Local Model Testing Results (2026-02-08)
+
+**Tested Models:**
+| Model | Result | Issue |
+|-------|--------|-------|
+| qwen2.5-14b-1m-heretic | ❌ Failed | No tool support |
+| mistral:7b | ❌ Failed | Too slow (CPU only), model confusion |
+
+**Root Causes:**
+1. **No GPU** - NucBox runs 100% CPU inference, too slow for real-time
+2. **Model intelligence** - 7B models can't follow complex agent instructions
+3. **Tool support** - Reasoning models strip tool calling capability
+
+**Conclusion:**
+Local LLMs on CPU-only hardware = background jobs only
+Real-time agents require cloud models or GPU acceleration
+
+**Recommended Hybrid Approach:**
+- Local models: summarization, memory compaction, batch processing
+- Cloud models: interactive agents, real-time chat, complex reasoning
